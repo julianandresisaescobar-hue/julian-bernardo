@@ -1,0 +1,254 @@
+
+/*asi se hace para poner comentarios */
+/*Los textos que no lleguen al margen */
+/* Estilos para móviles (pantallas menores a 768px) */
+@media (max-width: 768px) {
+  .seccion-tecnica {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+body {
+    background-color: #f8fafc; 
+    color: #334155;           
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 100;
+    padding: 0;
+    line-height: 1.8;         /* Espacio entre líneas para leer mejor */
+}
+
+
+.menu ul {
+    background-color: #1e293b; 
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+    display: flex;             /* Pone la mierda esa en fila*/
+    justify-content: center;   /* Centra la mierda esa*/
+    gap: 40px;                 /* Espacio */
+}
+
+.menu ul li a {
+    color: #ffffff;
+    text-decoration: none;     /* Quita el subrayado que aparece cuando pogo la lista  */
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.menu ul li a:hover {
+    color: #38bdf8;            
+}
+
+
+.contenedor {
+    max-width: 850px;          /* texto no se estire */
+    margin: 0 auto;            /* Centra */
+    padding: 60px 20px;
+    text-align: center;        /* Centra */
+}
+
+
+.seccion {
+    margin-bottom: 90px;       /* aumentar espacio entre bloques de contenido, pensando en cambiarlo segun el contenido que ponga  */
+}
+
+h1 {
+    color: #1e40af;            /* ponlo solo para titulos*/
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    
+}
+
+p {
+    text-align: justify;       /* se ve mas ordenado el texto */
+    font-size: 1.1rem;
+    color: #475569;        
+    margin: 100;  
+}
+
+
+.lista-grande {
+    text-align: left;          /* La lista se lee mejor */
+    display: inline-block;     /* Centra el bloque de la lista */
+    margin-top: 20px;
+}
+
+.lista-grande li {
+    margin: 15px 0;
+    padding-left: 10px;
+    border-left: 4px solid #3b82f6; /* Línea decorativa */
+}
+
+
+.Micro {
+    width: 330px;
+    height: auto;
+    margin: 40px 0;
+    
+display:block;
+margin:auto;
+}
+
+
+.codigo-caja {
+    background-color: #ffffff;
+    color: #1a5fb4;
+    border: 1px solid #cbd5e1;
+    padding: 20px;
+    font-family: 'Courier New', monospace;
+    display: inline-block;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+
+hr {
+    border: 0;
+    border-top: 1px solid #e2e8f0;
+    margin: 50px auto;
+    width: 50%;
+}
+
+.pie {
+    background-color: #f1f5f9;
+    padding: 50px;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+
+.descarga {
+    display: block;         /* Permite aplicar márgenes y centrar */
+    width: fit-content;     /* El ancho se ajusta al texto */
+    margin: 40px auto;      /* Centra el bloque horizontalmente */
+    font-size: 1.2rem;      /* Aumenta el tamaño del texto */
+    font-weight: bold;      /* Pone el texto en negrita */
+    color: #0000FF;         /* Color azul (puedes cambiarlo) */
+    text-decoration: none;  /* Quita el subrayado */
+    text-align: center;
+}
+
+.descarga img {
+    display: block;
+    margin: 15px auto 0;    /* Centra la imagen debajo del texto */
+    width: 50px;            /* Tamaño de la imagen (ajustable) */
+}
+
+.inicio{
+text-align: center;
+max-width: 850px;
+    margin: 0 auto;
+}
+
+.igor {
+    display: block;          
+    width: fit-content;      
+    margin-left: 50px; 
+    margin-right: 50px;       
+    text-align: center;      
+    text-decoration: none;   
+    color: #1e40af;         
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/*  principal  */
+.seccion-tecnica {
+    text-align: center;      /* Centra todo el texto y elementos */
+    padding: 50px 20px;
+    max-width: 800px;        
+    margin: 0 auto;          
+}
+
+/*logo centrado */
+.logo-centrado {
+    display: block;          
+    margin: 0 auto 20px;     /* Centra la imagen */
+    width: 150px;            /* Ajusta el tamaño  */
+    height: auto;
+}
+
+/* Estilos de los textos */
+.contenido-texto h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.contenido-texto p {
+    font-size: 1.1rem;
+    line-height: 1.6;        /* legibilidad */
+    margin-bottom: 15px;
+    text-align: center;      /* çcentrado */
+}
+/* Esto hace que el salto a la sección sea suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Contenedor principal del índice */
+.indice-moderno {
+    background: #ffffff;
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.indice-moderno h3 {
+    text-align: center;
+    color: #0078d4; /* Azul Microsoft */
+    margin-top: 0;
+    border-bottom: 2px solid #0078d4;
+    padding-bottom: 10px;
+}
+
+/* Quitar los puntos de la lista  */
+.indice-moderno ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.indice-moderno li {
+    margin: 10px 0;
+    transition: transform 0.2s;
+}
+
+/* Estilo */
+.indice-moderno a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 8px 15px;
+    border-radius: 4px;
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    font-weight: 500;
+}
+
+/* */
+.indice-moderno a:hover {
+    background-color: #0078d4;
+    color: white;
+    border-color: #005a9e;
+}
+
+.indice-moderno li:hover {
+    transform: translateX(5px); /*movimiento a la derecha */
+}
+
+/*  título no quede pegado arriba al saltar */
+.bloque-modulo {
+    scroll-margin-top: 50px;
+}

@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Código Completo - Proyecto Final</title>
+    <link rel="stylesheet" href="CSS.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        [id] { scroll-margin-top: 40px; }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a href="Proyecto.html">Inicio</a></li>
+                <li><a href="Codigo.html">Codigo</a></li>
+                <li><a href="Descarga.html">Descarga</a></li>
+                <li><a href="Memoria.html">Memoria</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="seccion-tecnica">
+        <h1>Índice</h1>
+        <nav class="indice-moderno">
+            <h3>Contenido del Proyecto</h3>
+            <ul>
+                <li><a href="#sec1">1. Lógica del Cambiador</a></li>
+                <li><a href="#sec2">2. Algoritmo de Compresión</a></li>
+                <li><a href="#sec3">3. Sistema de Filtrado</a></li>
+                <li><a href="#sec4">4. Indicador de Progreso</a></li>
+                <li><a href="#sec5">5. Diseño de Interfaz</a></li>
+                <li><a href="#sec6">6. Gestión de Rutas</a></li>
+                <li><a href="#sec7">7. Optimización y Limpieza</a></li>
+                <li><a href="#sec8">8. Integración PDF</a></li>
+                <li><a href="#sec9">9. Validación y Seguridad</a></li>
+                <li><a href="#sec10">10. Finalización del Ciclo</a></li>
+                <li><a href="#sec11">11. Eliminación Segura</a></li>
+                <li><a href="#sec12">12. Guía de Interacción</a></li>
+                <li><a href="#sec13">13. Conclusiones</a></li>
+            </ul>
+        </nav>
+
+        <br><br>
+
+        <h1>CODIGO</h1>
+        <img src="https://download.logo.wine/logo/Microsoft_Windows/Microsoft_Windows-Logo.wine.png" alt="Microsoft .NET Logo" class="logo-centrado">
+
+        <div class="contenido-texto">
+            <h2>Microsoft .NET</h2>
+            <p>
+                .NET es una plataforma de desarrollo de código abierto, gratuita y multiplataforma 
+                creada por Microsoft para crear muchos tipos diferentes de aplicaciones. 
+                En este proyecto, se ha utilizado el entorno de ejecución de .NET para 
+                garantizar la estabilidad y el rendimiento de la aplicación de escritorio.
+            </p>
+            <p>
+                Gracias a la integración con <strong>Visual Basic.NET</strong>, el software 
+                aprovecha las bibliotecas de clases de Windows Forms para ofrecer una 
+                interfaz de usuario intuitiva y una gestión de archivos robusta.
+            </p>
+
+            <section class="detalle-proyecto">
+                <h1>Gestor Avanzado de Archivos: Compresión y Conversión</h1>
+
+                <div class="bloque-introduccion">
+                    <p>
+                        Nuestra aplicación surge como una solución integral ante la necesidad de gestionar archivos de forma masiva y eficiente. 
+                        El software permite a los usuarios no solo reducir el peso de sus documentos mediante algoritmos de <strong>comprensión</strong>, 
+                        sino también adaptar sus archivos a diferentes entornos mediante el <strong>cambiador de extensiones</strong>.
+                    </p>
+                </div>
+
+                <div class="bloque-codigo-documentado" id="sec1">
+                    <h3>1. Lógica del Cambiador de Extensiones</h3>
+                    <p>
+                        El módulo de conversión permite renombrar la extensión de uno o varios archivos simultáneamente. 
+                        A continuación, se muestra el ejemplo de cómo el programa procesa el cambio de nombre en el sistema:
+                    </p>
+                    <div class="codigo-box">
+<pre><code>
+' Ejemplo de lógica para cambiar extensión en VB.NET
+Dim rutaOriginal As String = "C:\MisDocumentos\archivo.txt"
+Dim nuevaRuta As String = IO.Path.ChangeExtension(rutaOriginal, ".pdf")
+
+' Realiza el cambio físico en el disco
+IO.File.Move(rutaOriginal, nuevaRuta)
+</code></pre>
+                    </div>
+                    <p class="nota-tecnica">
+                        Utilizamos la biblioteca <code>IO.Path</code> de .NET para garantizar que la ruta del archivo sea válida 
+                        y no se pierdan datos durante el proceso de renombrado.
+                    </p>
+                </div>
+
+                <div class="bloque-codigo-documentado" id="sec2">
+                    <h3>2. Algoritmo de Compresión (ZIP)</h3>
+                    <p>
+                        Para la reducción de tamaño, implementamos la clase <code>ZipFile</code>, que permite agrupar múltiples 
+                        archivos en un solo paquete comprimido, facilitando su envío y almacenamiento.
+                    </p>
+                    <div class="codigo-box">
+<pre><code>
+' Comprimir una carpeta completa a un archivo ZIP
+Dim rutaCarpeta As String = "C:\Proyecto\Datos"
+Dim rutaZip As String = "C:\Proyecto\Backup.zip"
+
+IO.Compression.ZipFile.CreateFromDirectory(rutaCarpeta, rutaZip)
+</code></pre>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section class="seccion-tecnica">
+        <div class="bloque-modulo" id="sec3">
+            <h2>3. Sistema de Filtrado Inteligente</h2>
+            <p>
+                Para facilitar la selección de archivos, el software implementa un filtro dinámico que permite 
+                visualizar únicamente los formatos compatibles con la operación deseada (PDF, ZIP, TXT, etc.).
+            </p>
+            <div class="codigo-contenedor">
+<pre><code>
+' Configuración del filtro para el cuadro de diálogo
+Dim openFileDialog As New OpenFileDialog()
+openFileDialog.Filter = "Archivos de Texto (*.txt)|*.txt|Documentos PDF (*.pdf)|*.pdf|Todos los archivos (*.*)|*.*"
+openFileDialog.FilterIndex = 1
+
+If openFileDialog.ShowDialog() = DialogResult.OK Then
+    Dim ruta As String = openFileDialog.FileName
+    ' Lógica para procesar el archivo seleccionado
+End If
+</code></pre>
+            </div>
+        </div>
+
+        <div class="bloque-modulo" id="sec4">
+            <h2>4. Indicador de Progreso (ProgressBar)</h2>
+            <p>
+                Durante las operaciones de compresión pesadas, la aplicación informa al usuario en tiempo real 
+                mediante una barra de progreso, mejorando la interacción y el feedback del sistema.
+            </p>
+            <div class="codigo-contenedor">
+<pre><code>
+' Actualización de la interfaz durante un bucle de procesamiento
+For i As Integer = 1 To totalArchivos
+    ProcesarArchivo(i)
+    
+    ' Actualizar la barra de progreso en la UI
+    ProgressBar1.Value = (i / totalArchivos) * 100
+    lblEstado.Text = "Procesando: " & i & " de " & totalArchivos
+Next
+</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-tecnica">
+        <div class="bloque-modulo" id="sec5">
+            <h2>5. Diseño de Interfaz Personalizada</h2>
+            <p>
+                Para ofrecer una estética moderna, se han personalizado los controles estándar de Windows Forms. 
+                A continuación se muestra cómo gestionamos el diseño de los botones principales mediante CSS y propiedades de control.
+            </p>
+            <div class="codigo-contenedor">
+<pre><code>
+' Personalización estética del botón de acción
+With btnProcesar
+    .BackColor = Color.FromArgb(81, 43, 212) ' Color corporativo .NET
+    .ForeColor = Color.White
+    .FlatStyle = FlatStyle.Flat
+    .Font = New Font("Segoe UI", 10, FontStyle.Bold)
+End With
+</code></pre>
+            </div>
+        </div>
+
+        <div class="bloque-modulo" id="sec6">
+            <h2>6. Gestión de Rutas de Salida</h2>
+            <p>
+                El usuario puede elegir dónde desea guardar los archivos procesados. 
+                Esta función utiliza el componente <code>FolderBrowserDialog</code> para una navegación segura por las carpetas del sistema.
+            </p>
+            <div class="codigo-contenedor">
+<pre><code>
+' Selección de carpeta de destino para archivos convertidos
+Dim selectorCarpeta As New FolderBrowserDialog
+selectorCarpeta.Description = "Seleccione la carpeta donde guardar los resultados"
+
+If selectorCarpeta.ShowDialog() = DialogResult.OK Then
+    rutaDestinoGlobal = selectorCarpeta.SelectedPath
+    lblRutaSeleccionada.Text = "Destino: " & rutaDestinoGlobal
+End If
+</code></pre>
+            </div>
+        </div>
+
+        <div class="bloque-modulo" id="sec7">
+            <h2>7. Optimización y Limpieza</h2>
+            <p>
+                Para no saturar el almacenamiento del usuario, el software incluye un proceso de limpieza 
+                que elimina archivos temporales una vez finalizada la compresión o conversión.
+            </p>
+            <div class="codigo-contenedor">
+<pre><code>
+' Eliminar archivos temporales después del proceso
+If IO.File.Exists(rutaTemporal) Then
+    Try
+        IO.File.Delete(rutaTemporal)
+    Catch ex As Exception
+        ' Error silencioso si el archivo está en uso
+    End Try
+End If
+</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-tecnica">
+        <div class="bloque-modulo" id="sec8">
+            <h2>8. Integración con Formato PDF</h2>
+            <p>
+                Una de las funcionalidades estrella del cambiador es la capacidad de preparar documentos para su exportación a PDF, 
+                asegurando que la estructura del archivo se mantenga íntegra durante la conversión.
+            </p>
+            <div class="codigo-contenedor">
+<pre><code>
+' Lógica para verificar la integridad del PDF antes de la conversión
+If IO.Path.GetExtension(rutaArchivo).ToLower() = ".pdf" Then
+    ' El software valida que el archivo no esté protegido por contraseña
+    Console.WriteLine("Archivo PDF detectado y listo para procesar.")
+End If
+</code></pre>
+            </div>
+        </div>
+
+        <div class="bloque-modulo" id="sec9">
+            <h2>9. Validación y Seguridad de Datos</h2>
+            <p>
+                Para prevenir errores críticos, el programa valida que los campos no estén vacíos y que las rutas 
+                seleccionadas existan realmente en el dispositivo antes de ejecutar cualquier operación.
+            </p>
+            <div class="codigo-contenedor">
+<pre><code>
+' Validación de campos obligatorios
+If String.IsNullOrEmpty(txtRuta.Text) Or String.IsNullOrEmpty(txtExtension.Text) Then
+    MessageBox.Show("Por favor, rellene todos los campos antes de continuar.", 
+                    "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+    Return ' Detiene la ejecución
+End If
+</code></pre>
+            </div>
+        </div>
+
+        <div class="bloque-modulo" id="sec10">
+            <h2>10. Finalización del Ciclo de Vida</h2>
+            <p>
+                Al cerrar la aplicación, el sistema se asegura de liberar todos los procesos de fondo relacionados 
+                con la compresión para no dejar hilos de ejecución huérfanos en Windows.
+            </p>
+            <div class="codigo-contenedor">
+<pre><code>
+Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+    ' Liberar recursos y cerrar flujos de datos abiertos
+    Application.ExitThread()
+    End
+End Sub
+</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-tecnica">
+        <div class="bloque-modulo" id="sec11">
+            <h2>11. Eliminación Segura de Archivos</h2>
+            <p>
+                Para proteger los datos del usuario, el software no elimina los archivos de forma permanente de inmediato, 
+                sino que utiliza las librerías de Windows para enviarlos a la papelera, permitiendo su recuperación en caso de error.
+            </p>
+            <div class="codigo-contenedor">
+<pre><code>
+' Enviar archivo a la papelera de reciclaje en lugar de borrarlo permanentemente
+My.Computer.FileSystem.DeleteFile(rutaArchivo, 
+    Microsoft.VisualBasic.FileIO.UIOption.OnlyErrorDialogs, 
+    Microsoft.VisualBasic.FileIO.RecycleOption.SendToRecycleBin)
+</code></pre>
+            </div>
+        </div>
+
+        <div class="bloque-modulo" id="sec12">
+            <h2>12. Guía de Interacción para el Usuario</h2>
+            <p>
+                La interfaz ha sido diseñada para ser autodescriptiva. Siguiendo estos tres pasos, 
+                cualquier usuario puede dominar la herramienta en segundos:
+            </p>
+            <ul class="lista-instrucciones">
+                <li><strong>Seleccionar:</strong> Use el botón de búsqueda para localizar sus archivos.</li>
+                <li><strong>Configurar:</strong> Elija el idioma y el formato de destino (ZIP o extensión).</li>
+                <li><strong>Ejecutar:</strong> Pulse el botón central para iniciar el proceso automatizado.</li>
+            </ul>
+        </div>
+
+        <div class="bloque-modulo" id="sec13">
+            <h2>13. Conclusiones y Futuro</h2>
+            <p>
+                Este proyecto demuestra la potencia de <strong>.NET</strong> para crear herramientas de sistema ligeras. 
+                La combinación de una lógica robusta en Visual Basic y una interfaz moderna garantiza que el 
+                <strong>Gestor de Archivos de Bernardo y Julian</strong> funcione eficientemente.
+            </p>
+        </div>
+    </section>
+
+    <footer class="seccion-tecnica">
+        <hr style="width: 30%; margin: 40px auto; border-top: 1px solid #ddd;">
+        <p>Proyecto realizado por <strong>Bernardo Lopes</strong> y <strong>Julian Andres Isa</strong></p>
+        <a href="Descarga.html" class="descarga">
+            Descargar Proyecto
+            <img src="https://logos-world.net/wp-content/uploads/2020/12/Windows-New-Logo.png" alt="icono" style="width: 30px; display: block; margin: 10px auto;">
+        </a>
+    </footer>
+
+</body>
+</html>
